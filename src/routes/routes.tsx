@@ -11,7 +11,7 @@ export interface BaseRouteObject {
 
 export const routes: BaseRouteObject[] = [
   {
-    path: "/home",
+    path: "/",
     element: <HomePage />,
     key: "home",
   },
