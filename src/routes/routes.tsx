@@ -2,6 +2,7 @@ import React from "react";
 import HomePage from "../pages/home";
 import AboutPage from "../pages/about";
 import ContactPage from "../pages/contact";
+import NotFoundPage from "../pages/404";
 
 export interface BaseRouteObject {
   path: string;
@@ -25,4 +26,9 @@ export const routes: BaseRouteObject[] = [
     element: <ContactPage />,
     key: "contact",
   },
+  {
+    path: "*",
+    element: <NotFoundPage />,
+    key: "not-found",
+  }
 ];
