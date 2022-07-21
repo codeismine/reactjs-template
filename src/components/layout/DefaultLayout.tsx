@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import App from "../app";
+import Footer from "./Footer";
+import Header from "./Header";
 
 interface DefaultLayoutProps {
   children: React.ReactNode;
@@ -8,13 +10,18 @@ interface DefaultLayoutProps {
 
 const Container = styled.div`
   width: 100%;
+  position: relative;
 `;
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = (props) => {
   const { children } = props;
   return (
     <App>
-      <Container>{children}</Container>
+      <Container>
+        <Header />
+        {children}
+        <Footer copyRightYear={new Date().getFullYear()} />
+      </Container>
     </App>
   );
 };

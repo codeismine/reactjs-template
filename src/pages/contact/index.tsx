@@ -1,7 +1,8 @@
 import React from "react";
+import ContactComponent from "../../components/contact";
 
 const ContactPage: React.FC = () => {
-  return <div>Welcome Contact Page</div>;
+  return <ContactComponent />;
 };
 
 export default ContactPage;
